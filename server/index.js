@@ -19,6 +19,11 @@ app.use('/api/auth',userRoutes)
 
 app.use('/api/message',messageRoutes)
 
+app.get('/',(req,res)=>{
+  res.json({
+    messsage:"successfull"
+  })
+})
 
 
 
