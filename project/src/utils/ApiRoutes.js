@@ -1,4 +1,4 @@
-const host ='http://localhost:4126'
+const host ='https://chat-application-six-nu.vercel.app'
 
 const RegisterRoute = `${host}/api/auth/register`
 
