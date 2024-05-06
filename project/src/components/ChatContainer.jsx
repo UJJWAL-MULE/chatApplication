@@ -55,7 +55,7 @@ const ChatContainer = ({currentChat , currentUser , socket }) => {
         setArrivalMessage({ fromSelf: false, message: msg });
       });
     }
-  }, []);
+  }, [messages]);
 
   useEffect(() => {
     arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);
