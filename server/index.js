@@ -9,7 +9,10 @@ const socket = require('socket.io')
 const app = express()
 dotenv.config()
 
-app.use(cors())
+app.use(cors({
+    origin: "https://chat-application-9kh6.vercel.app",
+    credentials: true,
+  }))
 app.use(express.json())
 
 connect_db()
@@ -35,7 +38,7 @@ const io = socket(server, {
   cors: {
     origin: "https://chat-application-9kh6.vercel.app",
     credentials: true,
-  },
+  }
 });
 
 global.onlineUsers = new Map();
