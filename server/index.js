@@ -10,7 +10,7 @@ const app = express()
 dotenv.config()
 
 app.use(cors({
-    origin: "https://chat-application-9kh6.vercel.app",
+    origin: "https://chat-application-o7dx.vercel.app",
     credentials: true,
   }))
 app.use(express.json())
@@ -36,7 +36,7 @@ const server = app.listen(process.env.port,()=>{
 
 const io = socket(server, {
   cors: {
-    origin: "https://chat-application-9kh6.vercel.app",
+    origin: "https://chat-application-o7dx.vercel.app",
     credentials: true,
   }
 });
