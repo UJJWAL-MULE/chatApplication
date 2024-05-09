@@ -10,8 +10,8 @@ const app = express()
 dotenv.config()
 
 app.use(cors({
-    origin: "*",
-    credentials: true,
+    origin: "https://chat-application-o7dx.vercel.app",
+    credentials: true
   }))
 app.use(express.json())
 
