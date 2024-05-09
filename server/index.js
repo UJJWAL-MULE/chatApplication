@@ -12,7 +12,7 @@ dotenv.config()
     //origin: "https://chat-application-o7dx.vercel.app",
     //credentials: true
 app.use(cors({
-    origin: "https://vercel.com/ujjwal-mules-projects/chat-application-o7dx/9WLEEXscHJ1eBKBStyRqLxmbQHrA",
+    origin: "*",
     credentials: true
   }))
 app.use(express.json())
@@ -39,7 +39,7 @@ const server = app.listen(process.env.port,()=>{
 
 const io = socket(server, {
   cors: {
-    origin: "https://vercel.com/ujjwal-mules-projects/chat-application-o7dx/9WLEEXscHJ1eBKBStyRqLxmbQHrA",
+    origin: "https://chat-application-o7dx.vercel.app",
     credentials: true,
   }
 });
