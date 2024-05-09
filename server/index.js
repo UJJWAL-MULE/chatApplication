@@ -9,13 +9,16 @@ const socket = require('socket.io')
 const app = express()
 dotenv.config()
 
+    //origin: "https://chat-application-o7dx.vercel.app",
+    //credentials: true
 app.use(cors({
-    origin: "https://chat-application-o7dx.vercel.app",
+    origin: "*",
     credentials: true
   }))
 app.use(express.json())
 
 connect_db()
+
 
 
 app.use('/api/auth',userRoutes)
@@ -36,7 +39,7 @@ const server = app.listen(process.env.port,()=>{
 
 const io = socket(server, {
   cors: {
-    origin: "https://chat-application-o7dx.vercel.app",
+    origin: "*",
     credentials: true,
   }
 });
